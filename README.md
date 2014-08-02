@@ -1,3 +1,5 @@
+P2pool code with chikun and duo added. Duo nets are parallelcoinsha and parallelcoinscrypt. chikun net is chikun.
+
 Requirements:
 -------------------------
 Generic:
