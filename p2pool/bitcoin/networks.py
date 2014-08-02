@@ -418,7 +418,7 @@ parallelcoinscrypt=math.Object(
         SUBSIDY_FUNC=lambda height: 0.02*100000000 if height < 999  else 2*100000000 >> (height * 1)//250000,
         POW_FUNC=lambda data: pack.IntType(256).unpack(__import__('ltc_scrypt').getPoWHash(data)),
         BLOCK_PERIOD=300, # s
-        SYMBOL='DUO SCRYPT'
+        SYMBOL='DUO SCRYPT',
         CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'parallelcoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/parallelcoin') if platform.system() == 'Darwin' else os.path.expanduser('~/.parallelcoin'), 'parallelcoin.conf'),
         BLOCK_EXPLORER_URL_PREFIX='http://duo.broketech.net:3000/block/',
         ADDRESS_EXPLORER_URL_PREFIX='http://duo.broketech.net:3000/address/',
@@ -439,7 +439,7 @@ parallelcoinsha=math.Object(
         SUBSIDY_FUNC=lambda height: 0.02*100000000 if height < 999  else 2*100000000 >> (height * 1)//250000, 
         POW_FUNC=data.hash256,
         BLOCK_PERIOD=300, # s
-        SYMBOL='DUO SHA'
+        SYMBOL='DUO SHA',
         CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'parallelcoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/parallelcoin') if platform.system() == 'Darwin' else os.path.expanduser('~/.parallelcoin'), 'parallelcoin.conf'),
         BLOCK_EXPLORER_URL_PREFIX='http://duo.broketech.net:3000/block/',
         ADDRESS_EXPLORER_URL_PREFIX='http://duo.broketech.net:3000/address/',
