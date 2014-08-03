@@ -423,7 +423,7 @@ parallelcoinscrypt=math.Object(
         BLOCK_EXPLORER_URL_PREFIX='http://duo.broketech.net:3000/block/',
         ADDRESS_EXPLORER_URL_PREFIX='http://duo.broketech.net:3000/address/',
         TX_EXPLORER_URL_PREFIX='http://duo.broketech.net:3000/tx/',
-        SANE_TARGET_RANGE=(2**256//2**32//1000 - 1, 2**256//2**32 - 1),
+        SANE_TARGET_RANGE=(2**256//1000000000 - 1, 2**256//1000 - 1),
         DUMB_SCRYPT_DIFF=2**16,
         DUST_THRESHOLD=1e8,
     ),
