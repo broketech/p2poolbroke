@@ -394,7 +394,24 @@ chikun=math.Object(
         ANNOUNCE_CHANNEL='',
         VERSION_CHECK=lambda v: True,
     ),
-
+ vikingcoin=math.Object(
+        PARENT=networks.nets['vikingcoin'],
+        SHARE_PERIOD=90, # seconds
+        CHAIN_LENGTH=12*60*60//30, # shares
+        REAL_CHAIN_LENGTH=12*60*60//30, # shares
+        TARGET_LOOKBEHIND=20, # shares
+        SPREAD=20, # blocks
+        IDENTIFIER='abfb4a0b4fb4cb61'.decode('hex'),
+        PREFIX='f6b4b09e04b6504c'.decode('hex'),
+        P2P_PORT=13033,
+        MIN_TARGET=0,
+        MAX_TARGET=2**256//2**32 - 1,
+        PERSIST=False,
+        WORKER_PORT=13032,
+        BOOTSTRAP_ADDRS='chikun.broketech.net'.split(' '),
+        ANNOUNCE_CHANNEL='',
+        VERSION_CHECK=lambda v: True,
+),
 )
 for net_name, net in nets.iteritems():
     net.NAME = net_name
